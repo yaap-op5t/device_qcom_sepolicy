@@ -27,6 +27,7 @@
 
 persist.vendor.service.bdroid.      u:object_r:vendor_bluetooth_prop:s0
 persist.vendor.bt.soc.scram_freqs   u:object_r:vendor_bluetooth_prop:s0
+persist.vendor.bluetooth.           u:object_r:vendor_bluetooth_prop:s0
 persist.vendor.bluetooth.a2dp.      u:object_r:vendor_bluetooth_prop:s0
 persist.vendor.qcom.bluetooth.      u:object_r:vendor_bluetooth_prop:s0
 vendor.qcom.bluetooth.              u:object_r:vendor_bluetooth_prop:s0
@@ -84,6 +85,8 @@ vendor.iop.enable_prefetch_ofr   u:object_r:vendor_iop_prop:s0
 vendor.perf.gestureflingboost.enable  u:object_r:vendor_scroll_prop:s0
 vendor.qti.izat.           u:object_r:vendor_location_prop:s0
 vendor.usb.                u:object_r:vendor_usb_prop:s0
+vendor.wlan.driver.version       u:object_r:vendor_wifi_version:s0
+vendor.wlan.firmware.version     u:object_r:vendor_wifi_version:s0
 persist.vendor.usb.        u:object_r:vendor_usb_prop:s0
 ro.vendor.dbg.coresight.cfg_file     u:object_r:vendor_coresight_prop:s0
 vendor.audio.              u:object_r:vendor_audio_prop:s0
@@ -182,6 +185,8 @@ persist.vendor.wifi.softap.        u:object_r:vendor_softap_prop:s0
 #mm-video
 vendor.media.target.version        u:object_r:vendor_video_prop:s0
 vendor.video.disable.ubwc          u:object_r:vendor_video_prop:s0
+
+persist.vendor.camera.debug.logfile u:object_r:camera_prop:s0
 
 #rmt_storage
 ctl.vendor.rmt_storage     u:object_r:vendor_ctl_vendor_rmt_storage_prop:s0

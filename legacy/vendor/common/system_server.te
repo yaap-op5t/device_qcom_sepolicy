@@ -110,7 +110,7 @@ binder_call(system_server, fps_hal)
 allow system_server iqfp_service:service_manager find;
 
 # For shutdown animation
-allow system_server ctl_bootanim_prop:property_service set;
+set_prop(system_server, ctl_bootanim_prop)
 
 # allow tethering to access dhcp leases
 r_dir_file(system_server, dhcp_data_file)
@@ -186,3 +186,5 @@ get_prop(system_server, vendor_xlat_prop)
 
 # allow system_server to access IWifiStats HAL service
 hal_client_domain(system_server, hal_wifilearner)
+
+dontaudit system_server vendor_default_prop:file read;

@@ -451,12 +451,16 @@
 /sys/devices/virtual/kgsl/kgsl(/.*)?                                u:object_r:sysfs_kgsl:s0
 /sys/class/graphics/fb([0-3])+/mdp/caps                             u:object_r:sysfs_graphics:s0
 /sys/class/graphics/fb([0-3])+/ad                                   u:object_r:sysfs_graphics:s0
+/sys/class/lcd_bias/secure_mode                                     u:object_r:sysfs_graphics:s0
+/sys/class/leds/wled/secure_mode                                    u:object_r:sysfs_graphics:s0
 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/backlight(/.*)?     u:object_r:sysfs_graphics:s0
 /sys/devices/virtual/switch/hdmi(/.*)?                              u:object_r:sysfs_graphics:s0
 /sys/devices(/platform)?/soc/[a-f0-9]+.qcom,mdss_mdp/[a-z0-9]+.qcom,mdss_mdp:qcom,mdss_fb_primary/leds/lcd-backlight(/.*)?   u:object_r:sysfs_graphics:s0
 /sys/devices(/platform)?/soc/[a-f0-9]+.qcom,mdss_mdp/caps           u:object_r:sysfs_graphics:s0
 /sys/devices/soc/[a-f0-9]+.qcom,mdss_mdp/bw_mode_bitmap             u:object_r:sysfs_graphics:s0
 /sys/devices(/platform)?/soc/[a-f0-9]+.qcom,mdss_mdp/bw_mode_bitmap             u:object_r:sysfs_graphics:s0
+/sys/devices(/platform)?/soc/[a-z0-9]+\.qcom,fd/video4linux/video[0-9]+/name(/.*)?   u:object_r:sysfs_graphics:s0
+/sys/devices(/platform)?/soc/[a-z0-9]+\.qcom,msm-cam/video4linux/video[0-9]+/name(/.*)?   u:object_r:sysfs_graphics:s0
 /sys/devices(/platform)?/soc/[a-f0-9]+.qcom,mdss_cam/video4linux/video[0-9]+/name(/.*)?   u:object_r:sysfs_graphics:s0
 /sys/devices(/platform)?/soc/[a-f0-9]+.qcom,mdss_rotator/video4linux/video[0-9]+/name(/.*)?   u:object_r:sysfs_graphics:s0
 /sys/devices(/platform)?/soc/[a-f0-9]+.qcom,mdss_rotator/caps       u:object_r:sysfs_graphics:s0
@@ -471,7 +475,7 @@
 /sys/bus/msm_subsys/devices/subsys2/restart_level                   u:object_r:sysfs_ssr_toggle:s0
 /sys/bus/msm_subsys/devices/subsys3/restart_level                   u:object_r:sysfs_ssr_toggle:s0
 /sys/bus/msm_subsys/devices/subsys4/restart_level                   u:object_r:sysfs_ssr_toggle:s0
-/sys/devices/soc0/.*                                                u:object_r:sysfs_socinfo:s0
+/sys/devices/soc0(/.*)?                                             u:object_r:sysfs_socinfo:s0
 /sys/devices/soc/soc:qcom,ipa_fws@[a-f0-9]+/subsys0/name            u:object_r:sysfs_data:s0
 /sys/devices/soc/soc:hbtp/secure_touch                              u:object_r:hbtp_kernel_sysfs:s0
 /sys/devices/soc/soc:hbtp/secure_touch_enable                       u:object_r:hbtp_kernel_sysfs:s0
@@ -595,7 +599,7 @@
 /mnt/vendor/persist/qti_fp(/.*)?                                    u:object_r:persist_qti_fp_file:s0
 /mnt/vendor/persist/hlos_rfs(/.*)?                                  u:object_r:persist_rfs_shared_hlos_file:s0
 /mnt/vendor/persist/display(/.*)?                                   u:object_r:persist_display_file:s0
-/mnt/vendor/persist/rfs.*                                           u:object_r:persist_rfs_file:s0
+/mnt/vendor/persist/rfs(/.*)?                                       u:object_r:persist_rfs_file:s0
 /mnt/vendor/persist/speccfg(/.*)?                                   u:object_r:regionalization_file:s0
 /mnt/vendor/persist/misc(/.*)?                                      u:object_r:persist_misc_file:s0
 /mnt/vendor/persist/bms(/.*)?                                       u:object_r:persist_bms_file:s0

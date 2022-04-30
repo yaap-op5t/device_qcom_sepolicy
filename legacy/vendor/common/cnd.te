@@ -78,6 +78,9 @@ allow cnd wifi_vendor_wpa_socket:sock_file write;
 allow cnd wpa_data_file:dir w_dir_perms;
 allow cnd wpa_data_file:sock_file create_file_perms;
 
+# allow vendor_cnd to read wifi_hal_prop
+get_prop(cnd, wifi_hal_prop)
+
 # allow cnd to obtain wakelock
 wakelock_use(cnd)
 
@@ -113,6 +116,7 @@ allow cnd sysfs_data:file r_file_perms;
 
 add_hwservice(cnd, hal_latency_hwservice)
 add_hwservice(cnd, hal_datafactory_hwservice)
+add_hwservice(cnd, vendor_hal_mwqemadapter_hwservice)
 hwbinder_use(cnd)
 get_prop(cnd, hwservicemanager_prop)
 binder_call(cnd, vendor_dataservice_app)
